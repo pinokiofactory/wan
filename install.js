@@ -1,14 +1,23 @@
 module.exports = {
   run: [
     // Edit this step to customize the git repository to use
-    {
+    /*{
      when: "{{gpu !== 'nvidia'}}",
      method: "notify",
      params: {
        html: "This app requires an NVIDIA GPU."
      }, 
       next: null
+    },*/
+    {
+      when: "{{gpu === 'amd' || platform === 'darwin'}}",
+      method: "notify",
+      params: {
+        html: "This app requires an NVIDIA GPU. Not compatible with AMD GPUs and macOS."
+      },
+      next: null
     },
+
     {
       method: "shell.run",
       params: {

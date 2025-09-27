@@ -1,8 +1,8 @@
 const path = require('path')
 module.exports = {
   version: "3.7",
-  title: "Wan 2.1",
-  description: "[NVIDIA ONLY] Super Optimized Gradio UI for Wan2.1 video for GPU poor machines (5GB+ VRAM). Generate up to 12 sec videos https://github.com/deepbeepmeep/Wan2GP",
+  title: "Wan2GP",
+  description: "[NVIDIA ONLY] Super Optimized Gradio UI for AI video creation for GPU poor machines (6GB+ VRAM). Supports Wan 2.1/2.2, Qwen, Hunyuan Video, LTX Video and Flux: https://github.com/deepbeepmeep/Wan2GP",
   icon: "icon.jpg",
   menu: async (kernel, info) => {
     let installed = info.exists("app/env")
