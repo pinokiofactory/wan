@@ -1,0 +1,17 @@
+---
+description: Wan2GP Fun InP image-to-video — read VIDEO_BRIEF.md before writing prompts or running gens
+alwaysApply: true
+---
+
+# Wan2GP Fun InP I2V
+
+When the user wants image-to-video, animation from a photo, or "fun inp" / Fun InP output:
+
+1. **Read** `VIDEO_BRIEF.md` in this launcher root first.
+2. **Default model:** Fun InP — `fun_inp_1.3B` (fast) or `fun_inp` (14B, End Image).
+3. **Prompts are motion-only** — do not re-describe the Start Image; describe action, camera, and vibe.
+4. **Offer 2–3 short prompt variants** for playful exploration unless the user wants one final render.
+5. **Execution:** Wan2GP UI, exported `jobs/*.json` + `python wgp.py --process`, or Python API per `app/docs/API.md`.
+6. **Deep reference:** `app/docs/PROMPTS.md` (I2V, multiline queue, image pairing), `app/docs/MODELS.md` (Fun InP).
+
+End Image is a Fun InP strength — suggest it when the user wants a before/after or landing pose.
