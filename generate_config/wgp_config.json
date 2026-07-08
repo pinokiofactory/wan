@@ -1,0 +1,166 @@
+{
+    "attention_mode": "sdpa",
+    "transformer_types": [],
+    "transformer_quantization": "int8",
+    "text_encoder_quantization": "int8",
+    "lm_decoder_engine": "",
+    "save_path": "outputs",
+    "image_save_path": "outputs",
+    "compile": "",
+    "metadata_type": "metadata",
+    "boost": 1,
+    "enable_int8_kernels": 0,
+    "clear_file_list": 5,
+    "keep_intermediate_sliding_windows": 1,
+    "keep_resolution_on_model_switch": true,
+    "enable_4k_resolutions": 0,
+    "max_reserved_loras": -1,
+    "vae_config": 3,
+    "profile": 4.5,
+    "video_profile": 4.5,
+    "image_profile": 4,
+    "audio_profile": 4,
+    "preload_model_policy": [
+        "P"
+    ],
+    "UI_theme": "default",
+    "checkpoints_paths": [
+        "ckpts",
+        "."
+    ],
+    "loras_root": "loras",
+    "save_queue_if_crash": 1,
+    "queue_color_scheme": "pastel",
+    "process_queues_when_browser_unfocused": 1,
+    "multi_prompts_gen_type": "PG",
+    "model_hierarchy_type": 1,
+    "spatial_upsamplers": {
+        "flashvsr": {
+            "mode": 1,
+            "persistence": 1,
+            "backend": "auto",
+            "topk_ratio": 0.0
+        },
+        "pid": {
+            "tiling_threshold": 0,
+            "persistence": 1
+        },
+        "chain_of_zoom": {
+            "persistence": 1,
+            "parallel_tile_processing": "auto"
+        }
+    },
+    "audio_processors": {
+        "mmaudio": {
+            "mode": 1,
+            "persistence": 1
+        },
+        "prismaudio": {
+            "mode": 1,
+            "persistence": 1,
+            "steps": 24,
+            "cfg_scale": 5.0
+        },
+        "seedvc": {
+            "mode": 2,
+            "persistence": 1
+        }
+    },
+    "temporal_upsamplers": {
+        "rife": {
+            "version": "v4"
+        }
+    },
+    "deepy_enabled": 0,
+    "deepy_vram_mode": "unload",
+    "deepy_tool_edit_image": "Flux Klein 9B",
+    "deepy_tool_gen_image": "Z Image Turbo",
+    "deepy_tool_gen_video": "LTX-2 2.3 Distilled",
+    "deepy_tool_gen_video_with_speech": "Infinitalk",
+    "deepy_tool_gen_speech_from_description": "Qwen3 1.7B",
+    "deepy_tool_gen_speech_from_sample": "Index TTS 2",
+    "deepy_context_tokens": 16386,
+    "deepy_custom_system_prompt": "You are an elite AI Creative Director, Cinematographer, Storyboard Artist, Prompt Engineer, and Visual Effects Supervisor.\n\nYour role is to transform simple ideas into highly detailed prompts optimized for image generation, video generation, animation, and cinematic storytelling AI models.\n\nCore principles:\n\n- Always think visually.\n- Describe what the viewer sees, not abstract concepts.\n- Maximize visual quality, emotional impact, and creativity.\n- Generate prompts suitable for state-of-the-art AI image and video models.\n- Prioritize cinematic composition, lighting, atmosphere, motion, and storytelling.\n\nWhen creating prompts, consider:\n\n\u2022 Subject\n\u2022 Environment\n\u2022 Composition\n\u2022 Camera angle\n\u2022 Camera movement\n\u2022 Lens choice\n\u2022 Lighting\n\u2022 Atmosphere\n\u2022 Mood\n\u2022 Art style\n\u2022 Visual effects\n\u2022 Motion\n\u2022 Rendering quality\n\nSupported styles include:\n\n- Cinematic\n- Documentary\n- Hollywood film\n- Anime\n- Sci-fi\n- Fantasy\n- Horror\n- Cyberpunk\n- Music videos\n- Commercial advertising\n- Fashion films\n- Luxury branding\n- Concept art\n- Game cinematics\n- Photorealism\n- Stylized animation\n- Experimental art\n- Social media content\n- YouTube videos\n- VFX sequences\n\nPreferred visual techniques:\n\n- IMAX cinematography\n- Roger Deakins lighting\n- Christopher Nolan composition\n- Denis Villeneuve atmosphere\n- Fincher camera movement\n- Blade Runner aesthetics\n- Unreal Engine cinematics\n- Practical effects\n- Volumetric lighting\n- Atmospheric fog\n- Dynamic camera motion\n- Ultra-detailed textures\n- Film grain\n- Depth of field\n\nRules:\n\n- Never explain your reasoning.\n- Never provide analysis unless asked.\n- Output only the optimized prompt.\n- Adapt the style automatically to the user's intent.\n- If the user provides little detail, creatively expand the concept while preserving the original idea.\n- Prioritize visual spectacle, emotional impact, and cinematic quality.\n\nYour output should resemble instructions given by a world-class film director to a cinematographer and VFX team.",
+    "deepy_auto_cancel_queue_tasks": true,
+    "deepy_separate_requests_with_empty_line": true,
+    "prompt_enhancer_quantization": "gguf",
+    "prompt_enhancer_temperature": 0.6,
+    "prompt_enhancer_top_p": 0.9,
+    "prompt_enhancer_randomize_seed": true,
+    "audio_save_path": "outputs",
+    "enhancer_enabled": 1,
+    "extensions_defaults_version": "1.17",
+    "installed_remote_plugins": [],
+    "matanyone_version": "v1",
+    "video_output_codec": "libx264_8",
+    "hdr_video_crf": 8,
+    "video_container": "mp4",
+    "embed_source_images": false,
+    "image_output_codec": "jpeg_95",
+    "audio_output_codec": "aac_128",
+    "audio_stand_alone_output_codec": "wav",
+    "enabled_plugins": [
+        "motion_designer",
+        "downloads",
+        "models_manager"
+    ],
+    "motion_designer_bundled_migrated": 1,
+    "last_advanced_choice": true,
+    "last_model_per_family": {
+        "wan2_2": "animate",
+        "wan": "fun_inp_1.3B",
+        "z_image": "z_image",
+        "ltx2": "ltx2_22B_distilled",
+        "ltxv": "ltxv_13B",
+        "hunyuan": "hunyuan_avatar",
+        "hunyuan_1_5": "hunyuan_1_5_480_i2v",
+        "flux2": "flux2_klein_4b",
+        "qwen": "qwen_image_20B",
+        "hidream": "hidream_o1_dev",
+        "ideogram4": "ideogram4",
+        "krea2": "krea2_raw",
+        "tts": "dramabox_audio"
+    },
+    "last_model_per_type": {
+        "animate": "animate",
+        "alpha": "alpha",
+        "fun_inp_1.3B": "fun_inp_1.3B",
+        "t2v_1.3B": "t2v_1.3B",
+        "z_image": "z_image",
+        "ltx2_22B": "ltx2_22B_distilled",
+        "ltxv_13B": "ltxv_13B",
+        "hunyuan_avatar": "hunyuan_avatar",
+        "hunyuan_1_5_i2v": "hunyuan_1_5_480_i2v",
+        "flux2_dev": "flux2_dev",
+        "flux2_klein_4b": "flux2_klein_4b",
+        "qwen_image_20B": "qwen_image_20B",
+        "hidream_o1_dev": "hidream_o1_dev",
+        "ideogram4": "ideogram4",
+        "krea2_raw": "krea2_raw",
+        "chatterbox": "chatterbox",
+        "omnivoice": "omnivoice",
+        "qwen3_tts_base": "qwen3_tts_base",
+        "phantom_1.3B": "phantom_1.3B",
+        "dramabox_audio": "dramabox_audio"
+    },
+    "last_model_type": "z_image",
+    "model_output_filter": "all",
+    "last_resolution_choice": "832x480",
+    "last_resolution_per_group": {
+        "480p": "832x480",
+        "384p": "672x384",
+        "256p": "320x320",
+        "720p": "1024x1024"
+    },
+    "vae_precision": "32",
+    "mixed_precision": "1",
+    "transformer_dtype_policy": "fp16",
+    "fit_canvas": 0,
+    "enhancer_mode": 1,
+    "preload_in_VRAM": 0,
+    "depth_anything_v2_variant": "vitl",
+    "notification_sound_enabled": 0,
+    "notification_sound_volume": 50,
+    "max_frames_multiplier": 1,
+    "display_stats": 1
+}
