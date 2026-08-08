@@ -12,7 +12,7 @@ module.exports = {
         params: {
             input: true,
             path: "app",
-            venv: "env",
+            venv: "venv",
             message: "python wgp.py --ask-deepy"
         }
     }]

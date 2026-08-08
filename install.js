@@ -4,30 +4,25 @@ module.exports = {
   },
   run: [
     {
-      when: "{{gpu === 'amd' || platform === 'darwin'}}",
+      when: "{{gpu === 'nvidia' && gpu_driver && Number.parseFloat(gpu_driver) < 580 && !(kernel.gpu_model && / (10|16)\\d+/.test(kernel.gpu_model))}}",
       method: "notify",
       params: {
-        html: "This app requires an NVIDIA GPU. Not compatible with AMD GPUs and macOS."
+        html: "Your NVIDIA driver ({{gpu_driver}}) is too old for CUDA 13. Update to R580 or newer, then run Install again."
       },
       next: null
     },
     {
-      method: "shell.run",
+      when: "{{exists('app/env')}}",
+      method: "fs.rm",
       params: {
-        message: [
-          "git clone https://github.com/deepbeepmeep/Wan2GP app",
-        ]
+        path: "app/env"
       }
     },
     {
+      when: "{{!exists('app')}}",
       method: "shell.run",
       params: {
-        venv: "env",
-        path: "app",
-        message: [
-          "uv pip install -r requirements.txt --index-strategy unsafe-best-match",
-          "uv pip install hf-xet pip"
-        ]
+        message: "git clone https://github.com/deepbeepmeep/Wan2GP app"
       }
     },
     {
@@ -35,17 +30,37 @@ module.exports = {
       params: {
         uri: "torch.js",
         params: {
-          venv: "env",
+          venv_python: "3.11",
+          venv: "venv",
           path: "app",
           xformers: true
         }
       }
     },
     {
-      method: 'input',
+      method: "shell.run",
       params: {
-        title: 'Installation completed',
-        description: 'Click "Start" to get started'
+        venv: "venv",
+        path: "app",
+        message: [
+          "uv pip install -r requirements.txt --index-strategy unsafe-best-match",
+          "uv pip install hf-xet pip comtypes"
+        ]
+      }
+    },
+    {
+      when: "{{platform === 'win32' && gpu === 'amd'}}",
+      method: "shell.run",
+      params: {
+        venv: "venv",
+        path: "app",
+        message: "uv pip install numpy==1.26.4"
+      }
+    },
+    {
+      method: "notify",
+      params: {
+        html: "Installation completed"
       }
     }
   ]
