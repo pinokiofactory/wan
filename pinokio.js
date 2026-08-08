@@ -1,6 +1,6 @@
 const path = require('path')
 module.exports = {
-  version: "3.7",
+  version: "8.0",
   title: "Wan2GP",
   description: "Super Optimized Gradio UI for AI video creation for GPU poor machines (6GB+ VRAM). Supports Wan 2.1/2.2, Qwen, Hunyuan Video, LTX Video and Flux. https://github.com/deepbeepmeep/Wan2GP",
   icon: "icon.jpg",
