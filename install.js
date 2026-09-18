@@ -2,7 +2,15 @@ module.exports = {
   requires: {
     bundle: "ai"
   },
-  run: [
+  run: [{
+      when: "{{platform !== 'darwin' && vram < 6}}",
+      method: "input",
+      params: {
+        title: "Your system does not meet the minimum requirements for Wan2GP",
+        description: "You need a dedicated GPU with at least 6 GB VRAM and at least 16 GB System RAM to run Wan2GP." 
+      },
+      next: null
+    },
     {
       when: "{{gpu === 'nvidia' && gpu_driver && Number.parseFloat(gpu_driver) < 580 && !(kernel.gpu_model && / (10|16)\\d+/.test(kernel.gpu_model))}}",
       method: "notify",

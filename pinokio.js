@@ -43,6 +43,11 @@ module.exports = {
             text: "Open Web UI",
             href: local.url,
           }, {
+            default: true,
+            icon: "fa-solid fa-robot",
+            text: "Open Deepy",
+            href: local.url + "/deepy/",
+          }, {
             icon: 'fa-solid fa-terminal',
             text: "Terminal",
             href: "start.js",
@@ -59,10 +64,6 @@ module.exports = {
           icon: "fa-solid fa-power-off",
           text: "Start",
           href: "start.js",
-        }, {
-          icon: "fa-solid fa-robot",
-          text: "Deepy Agent",
-          href: "deepy.js",
         }, {
           icon: "fa-solid fa-power-off",
           text: "Advanced",
