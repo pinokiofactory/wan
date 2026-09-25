@@ -180,7 +180,7 @@ module.exports = {
         "venv": "{{args && args.venv ? args.venv : null}}",
         "path": "{{args && args.path ? args.path : '.'}}",
         "message": [
-          "uv pip install torch==2.10.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm7.1 --force-reinstall --no-deps",
+          "uv pip install torch==2.10.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm7.1 --force-reinstall",
           "uv pip install bitsandbytes==0.49.2 --no-deps"
         ]
       },
