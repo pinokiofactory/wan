@@ -38,7 +38,8 @@ module.exports = {
       params: {
         uri: "torch.js",
         params: {
-          venv_python: "3.11",
+          // diffq 0.2.4 has a CPython 3.10 macOS wheel; on 3.11 uv builds it from source.
+          venv_python: "{{platform === 'darwin' ? '3.10' : '3.11'}}",
           venv: "venv",
           path: "app",
           xformers: true
