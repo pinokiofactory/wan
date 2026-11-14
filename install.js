@@ -20,10 +20,10 @@ module.exports = {
       next: null
     },
     {
-      when: "{{exists('app/env')}}",
+      when: "{{exists('app/venv')}}",
       method: "fs.rm",
       params: {
-        path: "app/env"
+        path: "app/venv"
       }
     },
     {
