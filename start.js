@@ -19,7 +19,7 @@ module.exports = async (kernel) => {
             "python wgp.py --multiple-images --advanced {{args.compile ? '--compile' : ''}}"
           ],
           on: [{
-            "event": "/http:\/\/[0-9.:]+/",   
+            "event": "/(http:\/\/[0-9.:]+)/",
             "done": true
           }]
         }
@@ -27,7 +27,7 @@ module.exports = async (kernel) => {
       {
         method: "local.set",
         params: {
-          url: "{{input.event[0]}}"
+          url: "{{input.event[1]}}"
         }
       }
     ]
