@@ -51,6 +51,7 @@ module.exports = {
         venv: "venv",
         path: "app",
         message: [
+          "uv pip install kaldifst==1.9.0",
           "uv pip install -r requirements.txt --index-strategy unsafe-best-match",
           "uv pip install hf-xet pip comtypes"
         ]
